@@ -1,9 +1,6 @@
 package wk1;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class ArrayList<E> implements List<E> {
 
@@ -36,7 +33,11 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(Object o) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        boolean found = false;
+        for(int i=0; !found && i<size(); i++) {
+            found = Objects.equals(data[i], o);
+        }
+        return found;
     }
 
     @Override
@@ -56,7 +57,11 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        int index = indexOf(o);
+        if(index>=0) {
+            remove(index);
+        }
+        return index>=0;
     }
 
     @Override
@@ -86,18 +91,19 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public void clear() {
-        throw new UnsupportedOperationException("Haven't done this yet");
-
+        data = new Object[0];
     }
 
     @Override
     public E get(int index) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        return (E)data[index];
     }
 
     @Override
     public E set(int index, E element) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        E replaced = (E)data[index];
+        data[index] = element;
+        return replaced;
     }
 
     @Override
@@ -108,12 +114,30 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public E remove(int index) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        if(index<0 || index>=size()) {
+            throw new IndexOutOfBoundsException("Invalid index of " + index + " when size of " + size());
+        }
+        Object[] temp = new Object[size()-1];
+        for(int i=0; i<index; i++) {
+            temp[i] = data[i];
+        }
+        for(int i=index+1; i<size(); i++) {
+            temp[i-1] = data[i];
+        }
+        E removed = (E)data[index];
+        data = temp;
+        return removed;
     }
 
     @Override
     public int indexOf(Object o) {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        int index = -1;
+        for(int i=0; index==-1 && i<size(); i++) {
+            if(Objects.equals(data[i], o)) {
+                index = i;
+            }
+        }
+        return index;
     }
 
     @Override

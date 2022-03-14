@@ -23,9 +23,9 @@
 
 ### Array Based Lists
 
-* [ ] Describe key differences between an array and an [`ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) object
-* [ ] Implement classes and methods that make use of generics
-* [ ] Write an array-based implementation of the `List<E>` interface, including the following methods:
+* [x] Describe key differences between an array and an [`ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) object
+* [x] Implement classes and methods that make use of generics
+* [x] Write an array-based implementation of the `List<E>` interface, including the following methods:
     * [x] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
     * [ ] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
     * [x] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)

@@ -1,5 +1,10 @@
 ## Week 2
 
+### Announcements
+* Reading quiz due today
+* Emailing notes
+* Lunch with students T 11am, R 11am, F 11am
+
 ### Linked Lists
 
 * [ ] Describe key differences between an array based list and a linked list

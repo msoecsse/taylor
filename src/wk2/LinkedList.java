@@ -6,6 +6,13 @@ public class LinkedList<E> implements List<E> {
     private Node<E> head;
     private Node<E> tail;
 
+    public static void main(String[] args) {
+        List<String> words = null;
+        for(int i=0; i< words.size(); i++) {
+            System.out.println(words.get(i));
+        }
+    }
+
     private static class Node<E> {
         E value;
         Node<E> next;

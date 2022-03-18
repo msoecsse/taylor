@@ -1,9 +1,10 @@
 ## Week 2
 
 ### Announcements
-* Modified schedule: first exam on Friday of week 4
-* Not done with `remove(int)`
-* Lunch with students T 11am, R 11am, F 11am
+* Error in the HW2 tests: arraySortValue range in the arrayOutput tests should have been 975 and 1200.
+* Lunch with students ~~T 11am, R 11am,~~ F 11am
+* Will review class notes and let you know if I would prefer you to take them on paper
+* ~~Modified schedule: first exam on Friday of week 4~~
 * ~~Reading quiz due today~~
 * ~~Emailing notes~~
 

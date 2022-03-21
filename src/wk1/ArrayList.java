@@ -40,9 +40,28 @@ public class ArrayList<E> implements List<E> {
         return found;
     }
 
+    private class ArrayListIterator<E> implements Iterator<E> {
+        private int index = 0;
+
+        @Override
+        public boolean hasNext() {
+            return index<size();
+        }
+
+        @Override
+        public E next() {
+            return (E)data[index++];
+        }
+
+        @Override
+        public void remove() {
+            ArrayList.this.remove(--index);
+        }
+    }
+
     @Override
     public Iterator<E> iterator() {
-        throw new UnsupportedOperationException("Haven't done this yet");
+        return new ArrayListIterator<>();
     }
 
     @Override

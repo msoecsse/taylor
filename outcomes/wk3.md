@@ -1,7 +1,11 @@
 ## Week 3
 
-### Iterators
+### Announcements
+* 3-4pm office hour moved to noon-1pm today
+* Lunch with me 11am Tues. and Thurs.
+* Homework 3 includes an extra credit portion... No extra credit will be given
 
+### Iterators
 * [ ] List the methods declared in the [`Iterator<E>`](http://javadoc.taylorial.com/java.base/util/Iterator.html) interface
 * [ ] List the methods declared in the [`Iterable<E>`](http://javadoc.taylorial.com/java.base/lang/Iterable.html) interface
 * [ ] Implement the [`iterator()`](http://javadoc.taylorial.com/java.base/util/List.html#iterator%28%29) method in the `ArrayList` class (returning a fully functional iterator)
@@ -10,7 +14,6 @@
 * [ ] Be familiar with the [`ListIterator<E>`](http://javadoc.taylorial.com/java.base/util/ListIterator.html) interface
 
 ### Java Collections Framework and Testing
-
 * [ ] Explain the purpose of the Java Collections Framework
 * [ ] Be familiar with class/interface hierarchy for the Java Collections Framework
 * [ ] Describe the following levels of testing: unit, integration, system, and acceptance

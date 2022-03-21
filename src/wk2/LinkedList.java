@@ -166,7 +166,7 @@ public class LinkedList<E> implements List<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new LinkedListIterator<>();
     }
 
     @Override
@@ -217,5 +217,21 @@ public class LinkedList<E> implements List<E> {
     @Override
     public List<E> subList(int fromIndex, int toIndex) {
         return null;
+    }
+
+    private class LinkedListIterator<E> implements Iterator<E> {
+        private Node next = head;
+
+        @Override
+        public boolean hasNext() {
+            return next!=null;
+        }
+
+        @Override
+        public E next() {
+            E value = (E)next.value;
+            next = next.next;
+            return value;
+        }
     }
 }

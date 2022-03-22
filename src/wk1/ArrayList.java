@@ -40,8 +40,9 @@ public class ArrayList<E> implements List<E> {
         return found;
     }
 
-    private class ArrayListIterator<E> implements Iterator<E> {
+    private class ArrayListIterator implements Iterator<E> {
         private int index = 0;
+        private boolean removable = false;
 
         @Override
         public boolean hasNext() {
@@ -50,18 +51,23 @@ public class ArrayList<E> implements List<E> {
 
         @Override
         public E next() {
+            removable = true;
             return (E)data[index++];
         }
 
         @Override
         public void remove() {
+            if(!removable) {
+                throw new IllegalStateException("Cannot remove right now, so sorry.");
+            }
+            removable = false;
             ArrayList.this.remove(--index);
         }
     }
 
     @Override
     public Iterator<E> iterator() {
-        return new ArrayListIterator<>();
+        return new ArrayListIterator();
     }
 
     @Override

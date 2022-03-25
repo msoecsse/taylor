@@ -1,7 +1,10 @@
 ## Week 3
 
 ### Announcements
-* Lunch with me 11am Tues. and Thurs.
+* Masks in class/lab starting next week
+* Error in `LinkedListTests` class - remove line 194 - `add(0, x);` should not throw and `IndexOutOfBoundsException`
+* Lunch with me at noon today
+* ~~Lunch with me 11am Tues. and Thurs.~~
 * ~~3-4pm office hour moved to noon-1pm today~~
 * ~~Homework 3 includes an extra credit portion... No extra credit will be given~~
 

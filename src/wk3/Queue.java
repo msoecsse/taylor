@@ -12,7 +12,7 @@ public class Queue<E> implements PureQueue<E> {
     }
 
     @Override
-    public E poll() {
+    public E dequeue() {
         if(isEmpty()) {
             throw new NoSuchElementException();
         }
@@ -20,7 +20,7 @@ public class Queue<E> implements PureQueue<E> {
     }
 
     @Override
-    public void offer(E element) {
+    public void enqueue(E element) {
         worker.add(element);
     }
 

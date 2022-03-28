@@ -21,8 +21,8 @@
 * [x] Be familiar with class/interface hierarchy for the Java Collections Framework
 * [x] Describe the following levels of testing: unit, integration, system, and acceptance
 * [x] Describe the differences between black-box testing and white-box testing
-* [ ] List advantages and disadvantages of black-box testing verses white-box testing
-* [ ] Develop tests that test boundary conditions
+* [x] List advantages and disadvantages of black-box testing verses white-box testing
+* [x] Develop tests that test boundary conditions
 
 #Testing Notes
 ## Levels of Testing

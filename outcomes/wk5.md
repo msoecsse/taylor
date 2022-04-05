@@ -1,5 +1,19 @@
 ## Week 5
 
+### Announcements
+* Quiz 4 feedback:
+  - ~~10% Lab Quizzes~~
+  - ~~10% Reading Quizzes/SLMs~~
+  -  ~~5% Homework~~
+  -  5% Lab Quizzes (no additional quizzes)
+  - 10% Reading Quizzes/SLMs
+  - 10% Homework (previous homework can be submitted through Wednesday)
+* Lunch: Mon. 12:30-1pm, Tues. noon-1pm
+* ~~Exam I:~~
+  - ~~100%   High~~
+  -  ~~76.5% Average~~
+  -  ~~53%   Low~~
+
 ### Queues
 
 * [x] Enumerate and explain the methods that are part of a **pure queue** interface

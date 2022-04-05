@@ -7,10 +7,11 @@ public class LinkedList<E> implements List<E> {
     private Node<E> tail;
 
     public static void main(String[] args) {
-        List<String> words = null;
-        for(int i=0; i< words.size(); i++) {
-            System.out.println(words.get(i));
+        LinkedList<String> words = new LinkedList<>();
+        for(int i=0; i<5; i++) {
+            words.add("add" + i);
         }
+        System.out.println(words.countNodes());
     }
 
     private static class Node<E> {
@@ -68,6 +69,18 @@ public class LinkedList<E> implements List<E> {
         return size;
     }
 
+    public int countNodes() {
+        return countRemainingNodes(head);
+    }
+
+    private int countRemainingNodes(Node<E> node) {
+        int count = 0;
+        if(node!=null) {
+            count = 1 + countRemainingNodes(node.next);
+        }
+        return count;
+    }
+
     @Override
     public boolean isEmpty() {
         return head==null;
@@ -116,9 +129,21 @@ public class LinkedList<E> implements List<E> {
         return walker;
     }
 
+    private Node<E> walkToRecursive(int index, Node<E> node) {
+//        if(index==0) {
+//            return node;
+//        } else {
+//            return walkToRecursive(index-1, node.next);
+//        }
+        if(index<0 || node==null) {
+            throw new IndexOutOfBoundsException("You blew it, and not in good way.");
+        }
+        return index==0 ? node : walkToRecursive(index-1, node.next);
+    }
+
     @Override
     public E get(int index) {
-        return walkTo(index).value;
+        return walkToRecursive(index, head).value;
     }
 
     @Override

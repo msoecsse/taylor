@@ -29,10 +29,10 @@
 
 ### Recursion
 
-* [ ] For a given input, determine how many times a recursive method will call itself
-* [ ] Explain the role of the base case and recursive step in recursive algorithms
-* [ ] Use recursion to traverse a list
-* [ ] Use recursion to search a sorted array
-* [ ] Use the `compareTo()` method from the `Comparable` interface to determine which of two objects is bigger
+* [x] For a given input, determine how many times a recursive method will call itself
+* [x] Explain the role of the base case and recursive step in recursive algorithms
+* [x] Use recursion to traverse a list
+* [x] Use recursion to search a sorted array
+* [x] Use the `compareTo()` method from the `Comparable` interface to determine which of two objects is bigger
 * [ ] Write a generic class which implements the `Comparable` interface appropriately
-* [ ] Understand and apply recursion in algorithm development
+* [x] Understand and apply recursion in algorithm development

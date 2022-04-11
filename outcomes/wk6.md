@@ -1,5 +1,9 @@
 ## Week 6
 
+### Announcements
+* If you don't have a grade for lab 4, I don't have a submission
+* Lunch: 11am Tuesday and Thursday
+
 ### Binary Trees
 
 * [ ] Use the following terms to describe nodes in a tree: root, children, parent, sibling, leaf, ancestor, descendent

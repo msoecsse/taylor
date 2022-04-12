@@ -1,6 +1,7 @@
 ## Week 6
 
 ### Announcements
+* Look at diff for BST class
 * If you don't have a grade for lab 4, I don't have a submission
 * Lunch: 11am Tuesday and Thursday
 

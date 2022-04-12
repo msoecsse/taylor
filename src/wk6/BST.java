@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
-public class BST<E extends Comparable<E>> implements Set<E> {
-    private static class Node<E extends Comparable<E>> {
+public class BST<E extends Comparable<? super E>> implements Set<E> {
+    private static class Node<E extends Comparable<? super E>> {
         E value;
         Node<E> rKid;
         Node<E> lKid;
@@ -22,10 +22,33 @@ public class BST<E extends Comparable<E>> implements Set<E> {
         }
     }
 
+    public static void main(String[] args) {
+        BST<Integer> tree = new BST<>();
+        tree.add(3);
+        tree.add(1);
+        tree.add(4);
+        tree.add(2);
+        tree.add(5);
+        tree.inOrder();
+        System.out.println(tree.contains(-5));
+    }
+
     private Node<E> root;
 
     public BST() {
         root = null;
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    public void inOrder(Node<E> subroot) {
+        if(subroot!=null) {
+            inOrder(subroot.lKid);
+            System.out.println(subroot.value);
+            inOrder(subroot.rKid);
+        }
     }
 
     @Override
@@ -36,6 +59,16 @@ public class BST<E extends Comparable<E>> implements Set<E> {
     @Override
     public void clear() {
         root = null;
+    }
+
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node<E> subroot) {
+        return subroot==null ? -1
+                :
+                1 + Math.max(height(subroot.lKid), height(subroot.rKid));
     }
 
     @Override
@@ -53,24 +86,15 @@ public class BST<E extends Comparable<E>> implements Set<E> {
 
     @Override
     public boolean contains(Object target) {
-        // TODO Don't do this... should figure out how to cast safely instead
-        E targ = null;
-        try {
-            targ = (E) target;
-        } catch (ClassCastException e) {
-            return false;
-        }
-        return contains(root, targ);
+        return target instanceof Comparable<?> && contains(root, (E) target);
     }
 
     private boolean contains(Node<E> subroot, E target) {
         boolean found = false;
-        E targ = null;
-        targ = (E)target;
         if(subroot!=null) {
             found = Objects.equals(subroot.value, target);
             if(!found) {
-                if(subroot.value.compareTo(targ)<0) {
+                if(subroot.value.compareTo(target)<0) {
                     found = contains(subroot.rKid, target);
                 } else {
                     found = contains(subroot.lKid, target);
@@ -87,7 +111,7 @@ public class BST<E extends Comparable<E>> implements Set<E> {
         }
         boolean changed = false;
         if(root==null) {
-            root = new Node(element);
+            root = new Node<>(element);
             changed = true;
         } else {
             changed = add(root, element);
@@ -100,14 +124,14 @@ public class BST<E extends Comparable<E>> implements Set<E> {
         if(!Objects.equals(subroot.value, element)) {
             if(subroot.value.compareTo(element)<0) {
                 if(subroot.rKid==null) {
-                    subroot.rKid = new Node(element);
+                    subroot.rKid = new Node<>(element);
                     changed = true;
                 } else {
                     changed = add(subroot.rKid, element);
                 }
             } else {
                 if(subroot.lKid==null) {
-                    subroot.lKid = new Node(element);
+                    subroot.lKid = new Node<>(element);
                     changed = true;
                 } else {
                     changed = add(subroot.lKid, element);

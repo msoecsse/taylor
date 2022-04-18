@@ -1,9 +1,7 @@
 package wk6;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Consumer;
 
 public class BST<E extends Comparable<? super E>> implements Set<E> {
     private static class Node<E extends Comparable<? super E>> {
@@ -24,13 +22,22 @@ public class BST<E extends Comparable<? super E>> implements Set<E> {
 
     public static void main(String[] args) {
         BST<Integer> tree = new BST<>();
-        tree.add(3);
+        tree.add(2);
         tree.add(1);
         tree.add(4);
-        tree.add(2);
+        tree.add(3);
         tree.add(5);
-        tree.inOrder();
-        System.out.println(tree.contains(-5));
+        tree.printInOrder();
+        System.out.println("\nIn-Order List");
+        List<Integer> sorted = tree.getSortedList();
+        System.out.println(sorted);
+        System.out.println("\nPost-Order Expression Tree");
+        List<Integer> list = tree.expPostOrder();
+        System.out.println(list);
+        System.out.println();
+        System.out.println("Pre-Order Clone");
+        BST<Integer> clone = tree.clone();
+        System.out.println(clone.getSortedList());
     }
 
     private Node<E> root;
@@ -39,15 +46,54 @@ public class BST<E extends Comparable<? super E>> implements Set<E> {
         root = null;
     }
 
-    public void inOrder() {
-        inOrder(root);
+
+    public List<E> expPostOrder() {
+        final List<E> list = new LinkedList<>();
+        Consumer<E> add = e -> list.add(e);
+        postOrder(root, add);
+        return list;
     }
 
-    public void inOrder(Node<E> subroot) {
+    private void postOrder(Node<E> subroot, Consumer<E> consumer) {
         if(subroot!=null) {
-            inOrder(subroot.lKid);
-            System.out.println(subroot.value);
-            inOrder(subroot.rKid);
+            postOrder(subroot.lKid, consumer);
+            postOrder(subroot.rKid, consumer);
+            consumer.accept(subroot.value);
+        }
+    }
+
+    public BST<E> clone() {
+        final BST<E> bst = new BST<>();
+        Consumer<E> add = e -> bst.add(e);
+        preOrder(root, add);
+        return bst;
+    }
+
+    private void preOrder(Node<E> subroot, Consumer<E> consumer) {
+        if(subroot!=null) {
+            consumer.accept(subroot.value);
+            preOrder(subroot.lKid, consumer);
+            preOrder(subroot.rKid, consumer);
+        }
+    }
+
+    public void printInOrder() {
+        Consumer<E> print = e -> System.out.println(e);
+        inOrder(root, print);
+    }
+
+    public List<E> getSortedList() {
+        final List<E> list = new LinkedList<>();
+        Consumer<E> add = e -> list.add(e);
+        inOrder(root, add);
+        return list;
+    }
+
+    private void inOrder(Node<E> subroot, Consumer<E> consumer) {
+        if(subroot!=null) {
+            inOrder(subroot.lKid, consumer);
+            consumer.accept(subroot.value);
+            inOrder(subroot.rKid, consumer);
         }
     }
 

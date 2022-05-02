@@ -6,15 +6,21 @@ import java.util.function.Consumer;
 public class BST<E extends Comparable<? super E>> implements Set<E> {
     private static class Node<E extends Comparable<? super E>> {
         E value;
+        Node<E> parent;
         Node<E> rKid;
         Node<E> lKid;
 
         Node(E value) {
-            this(value, null, null);
+            this(value, null, null, null);
         }
 
-        Node(E value, Node<E> rKid, Node<E> lKid) {
+        Node(E value, Node<E> parent) {
+            this(value, parent, null, null);
+        }
+
+        Node(E value, Node<E> parent, Node<E> lKid, Node<E> rKid) {
             this.value = value;
+            this.parent = parent;
             this.rKid = rKid;
             this.lKid = lKid;
         }
@@ -22,22 +28,12 @@ public class BST<E extends Comparable<? super E>> implements Set<E> {
 
     public static void main(String[] args) {
         BST<Integer> tree = new BST<>();
-        tree.add(2);
         tree.add(1);
-        tree.add(4);
+        tree.add(2);
         tree.add(3);
-        tree.add(5);
-        tree.printInOrder();
-        System.out.println("\nIn-Order List");
-        List<Integer> sorted = tree.getSortedList();
-        System.out.println(sorted);
-        System.out.println("\nPost-Order Expression Tree");
-        List<Integer> list = tree.expPostOrder();
-        System.out.println(list);
-        System.out.println();
-        System.out.println("Pre-Order Clone");
-        BST<Integer> clone = tree.clone();
-        System.out.println(clone.getSortedList());
+        tree.add(4);
+        tree.leftRotate(tree.root.rKid);
+        System.out.println(tree);
     }
 
     private Node<E> root;
@@ -170,14 +166,14 @@ public class BST<E extends Comparable<? super E>> implements Set<E> {
         if(!Objects.equals(subroot.value, element)) {
             if(subroot.value.compareTo(element)<0) {
                 if(subroot.rKid==null) {
-                    subroot.rKid = new Node<>(element);
+                    subroot.rKid = new Node<>(element, subroot);
                     changed = true;
                 } else {
                     changed = add(subroot.rKid, element);
                 }
             } else {
                 if(subroot.lKid==null) {
-                    subroot.lKid = new Node<>(element);
+                    subroot.lKid = new Node<>(element, subroot);
                     changed = true;
                 } else {
                     changed = add(subroot.lKid, element);
@@ -185,6 +181,43 @@ public class BST<E extends Comparable<? super E>> implements Set<E> {
             }
         }
         return changed;
+    }
+
+    /*
+              P                            P <--
+              |                            |
+              B                            A <--
+            /   \                        /   \
+          A      C      <-------        w     B <--
+         / \    / \     LR on A              / \
+        w  x   y  z                     --> x    C
+                                                / \
+                                               y   z
+     */
+    private Node<E> leftRotate(Node<E> A) {
+        if(A==null || A.rKid == null) {
+            throw new IllegalArgumentException("Can't rotate without node and its right child.");
+        }
+        Node<E> B = A.rKid;
+        Node<E> x = B.lKid;
+        Node<E> P = A.parent;
+        A.parent = B;
+        A.rKid = x;
+        if(x != null) {
+            x.parent = A;
+        }
+        B.parent = P;
+        if(P == null) {
+            root = B;
+        } else {
+            if(P.lKid == A) {
+                P.lKid= B;
+            } else {
+                P.rKid = B;
+            }
+        }
+        B.lKid = A;
+        return B;
     }
 
     @Override

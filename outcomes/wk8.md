@@ -1,9 +1,6 @@
 ## Week 8
 
 ### Announcements
-* ~~Exam II: High: 100% Median: 92%, Low: 47%~~
-* Office hours today: 7-8am, ~~9-10am~~, 10-11am, 1-2pm
-* Invitation to attend demo lecture for faculty candidate 9am today in DH210
 
 ### Sets and Maps
 

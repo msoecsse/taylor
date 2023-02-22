@@ -1,9 +1,6 @@
 ## Week 9
 
 ### Announcements
-* ~~SLM 9~~
-* ~~Lab 9 details~~
-* ~~Final exam~~
 
 ### Big-O Analysis
 
@@ -32,10 +29,10 @@
 
 ### Balanced Trees
 
-* [x] Describe the impact that balance has on the performance of binary search trees
-* [x] Implement the `leftRotate()` and `rightRotate()` methods for a binary tree
-* [x] Explain the mechanism used in AVL trees to ensure that they remain balanced
-* [x] Illustrate the steps required to balance an AVL tree upon insertion of an additional element
+* [ ] Describe the impact that balance has on the performance of binary search trees
+* [ ] Implement the `leftRotate()` and `rightRotate()` methods for a binary tree
+* [ ] Explain the mechanism used in AVL trees to ensure that they remain balanced
+* [ ] Illustrate the steps required to balance an AVL tree upon insertion of an additional element
 
 ### Deep verses Shallow Copies
 

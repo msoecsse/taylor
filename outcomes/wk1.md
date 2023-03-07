@@ -1,6 +1,20 @@
 ## Week 1
 
 ### Announcements
+* Be sure to read the following
+  - [CS2852 Overview](https://csse.msoe.us/cs2852/)
+  - [General Course Policies](https://csse.msoe.us/taylor/policy/)
+  - [My Schedule](https://csse.msoe.us/taylor/schedule/)
+  - [Canvas modules](https://msoe.instructure.com/courses/12981/modules)
+* Office hours:
+  - 8-10am and 2-4pm Mondays
+  - 8-9am Tuesdays
+  - 2-4pm Thursdays
+  - 8-9am Fridays
+* No quiz this week
+* Lab 1 partial completion due by end of lab tomorrow (see lab 1)
+* Homework, SLM1, Reading quiz all due Saturday (3/11)
+* Lunch with students next week noon-1pm Monday (3/13) and Tuesday (3/14)
 
 ### Interfaces
 
@@ -21,12 +35,12 @@
     * [ ] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
     * [ ] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
     * [ ] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
-    * [ ] [`indexOf(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
+    * [ ] [**`indexOf(Object)`**](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
     * [ ] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)
     * [ ] [`remove(int)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28int%29)
     * [ ] [`remove(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28java.lang.Object%29)
     * [ ] [`set(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#set%28int,E%29)
     * [ ] [`size()`](http://javadoc.taylorial.com/java.base/util/List.html#size%28%29)
-    * [ ] [`toArray()`](http://javadoc.taylorial.com/java.base/util/List.html#toArray%28%29)
+    * [ ] [**`toArray()`**](http://javadoc.taylorial.com/java.base/util/List.html#toArray%28%29)
 * [ ] Implement small software systems that use one or more `ArrayList<E>` objects
 * [ ] Describe key differences between the in class implementation and the [`java.util.ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) implementation

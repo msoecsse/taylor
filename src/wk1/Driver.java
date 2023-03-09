@@ -1,7 +1,5 @@
 package wk1;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Driver {
@@ -9,6 +7,7 @@ public class Driver {
         List<String> words = new ArrayList<>();
         words.add("hay");
         words.add("cheese");
-        System.out.println(words);
+        words.add(null);
+        System.out.println(words.contains(null));
     }
 }

@@ -14,16 +14,16 @@
 * No quiz this week
 * Lab 1 partial completion due by end of lab tomorrow (see lab 1)
 * Homework, SLM1, Reading quiz all due Saturday (3/11)
-* Lunch with students next week noon-1pm Monday (3/13) and Tuesday (3/14)
+* Lunch with students next week noon-1pm ~~Monday (3/13)~~ and Tuesday (3/14)
 
 ### Interfaces
 
-* [ ] Use the [`Collection<E>`](http://javadoc.taylorial.com/java.base/util/Collection.html) and [`List<E>`](http://javadoc.taylorial.com/java.base/util/List.html) interfaces defined in the Java Collections Framework
-* [ ] Explain when to use `Collection<E>` instead of `List<E>` and vice versa
-* [ ] Demonstrate correct use of generics when declaring `Collection<E>` and `List<E>` interfaces
-* [ ] Describe the implications of an interface extending another interface
-* [ ] List two classes that implement the `Collection<E>` interface
-* [ ] List two classes that implement the `List<E>` interface
+* [x] Use the [`Collection<E>`](http://javadoc.taylorial.com/java.base/util/Collection.html) and [`List<E>`](http://javadoc.taylorial.com/java.base/util/List.html) interfaces defined in the Java Collections Framework
+* [x] Explain when to use `Collection<E>` instead of `List<E>` and vice versa
+* [x] Demonstrate correct use of generics when declaring `Collection<E>` and `List<E>` interfaces
+* [x] Describe the implications of an interface extending another interface
+* [x] List two classes that implement the `Collection<E>` interface
+* [x] List two classes that implement the `List<E>` interface
 
 ### Array Based Lists
 

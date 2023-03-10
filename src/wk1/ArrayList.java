@@ -73,8 +73,8 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public E remove(int index) {
-        E[] smallerArray = (E[])new Object[size()-1];
         E removedElement = get(index);
+        E[] smallerArray = (E[])new Object[size()-1];
         for(int i=0; i<index; i++) {
             smallerArray[i] = data[i];
         }

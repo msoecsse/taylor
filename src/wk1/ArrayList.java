@@ -12,10 +12,10 @@ public class ArrayList<E> implements List<E> {
     @Override
     public boolean add(E e) {
         E[] biggerArray = (E[])new Object[data.length+1];
-        for(int i=0; i<data.length; i++) {
+        for(int i=0; i<size(); i++) {
             biggerArray[i] = data[i];
         }
-        biggerArray[data.length] = e;
+        biggerArray[size()] = e;
         data = biggerArray;
         return true;
     }
@@ -61,17 +61,28 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        return null;
+        return data[index];
     }
 
     @Override
     public E set(int index, E element) {
-        return null;
+        E previousValue = data[index];
+        data[index] = element;
+        return previousValue;
     }
 
     @Override
     public E remove(int index) {
-        return null;
+        E[] smallerArray = (E[])new Object[size()-1];
+        E removedElement = get(index);
+        for(int i=0; i<index; i++) {
+            smallerArray[i] = data[i];
+        }
+        for(int i=index+1; i<size(); i++) {
+            smallerArray[i-1] = data[i];
+        }
+        data = smallerArray;
+        return removedElement;
     }
 
     @Override

@@ -27,20 +27,20 @@
 
 ### Array Based Lists
 
-* [ ] Describe key differences between an array and an [`ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) object
-* [ ] Implement classes and methods that make use of generics
+* [x] Describe key differences between an array and an [`ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) object
+* [x] Implement classes and methods that make use of generics
 * [ ] Write an array-based implementation of the `List<E>` interface, including the following methods:
-    * [ ] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
+    * [x] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
     * [ ] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
-    * [ ] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
-    * [ ] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
-    * [ ] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
+    * [x] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
+    * [x] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
+    * [x] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
     * [ ] [**`indexOf(Object)`**](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
-    * [ ] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)
-    * [ ] [`remove(int)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28int%29)
+    * [x] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)
+    * [x] [`remove(int)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28int%29)
     * [ ] [`remove(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28java.lang.Object%29)
-    * [ ] [`set(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#set%28int,E%29)
-    * [ ] [`size()`](http://javadoc.taylorial.com/java.base/util/List.html#size%28%29)
+    * [x] [`set(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#set%28int,E%29)
+    * [x] [`size()`](http://javadoc.taylorial.com/java.base/util/List.html#size%28%29)
     * [ ] [**`toArray()`**](http://javadoc.taylorial.com/java.base/util/List.html#toArray%28%29)
 * [ ] Implement small software systems that use one or more `ArrayList<E>` objects
 * [ ] Describe key differences between the in class implementation and the [`java.util.ArrayList<E>`](http://javadoc.taylorial.com/java.base/util/ArrayList.html) implementation

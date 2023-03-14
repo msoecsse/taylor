@@ -1,5 +1,6 @@
 package wk1;
 
+import wk2.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +11,7 @@ class ListTest {
 
     @BeforeEach
     void setUp() {
-        list = new ArrayList<>();
+        list = new LinkedList<>();
     }
 
     @AfterEach

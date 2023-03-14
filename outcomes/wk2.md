@@ -1,12 +1,15 @@
 ## Week 2
 
 ### Announcements
+* Quiz tomorrow over week 1 material
+* Exam I is Friday of week 3
+* Will have labs back by tomorrow morning
 
 ### Linked Lists
 
 * [ ] Describe key differences between an array based list and a linked list
 * [ ] Describe advantages and disadvantages of a singly linked list verses a doubly linked list
-* [ ] Write an singly linked list implementation of the `List<E>` interface, including the following methods:
+* [ ] Write a singly linked list implementation of the `List<E>` interface, including the following methods:
     * [ ] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
     * [ ] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
     * [ ] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)

@@ -27,7 +27,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public void add(int index, E element) {
-
+        // Potential quiz question
     }
 
     @Override

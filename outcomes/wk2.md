@@ -7,13 +7,13 @@
 
 ### Linked Lists
 
-* [ ] Describe key differences between an array based list and a linked list
-* [ ] Describe advantages and disadvantages of a singly linked list verses a doubly linked list
+* [x] Describe key differences between an array based list and a linked list
+* [x] Describe advantages and disadvantages of a singly linked list verses a doubly linked list
 * [ ] Write a singly linked list implementation of the `List<E>` interface, including the following methods:
-    * [ ] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
-    * [ ] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
-    * [ ] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
-    * [ ] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
+    * [x] [`add(E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28E%29)
+    * [x] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
+    * [x] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
+    * [x] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
     * [ ] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
     * [ ] [`indexOf(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
     * [ ] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)

@@ -14,15 +14,15 @@
     * [x] [`add(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#add%28int,E%29)
     * [x] [`clear()`](http://javadoc.taylorial.com/java.base/util/List.html#clear%28%29)
     * [x] [`contains(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#contains%28java.lang.Object%29)
-    * [ ] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
-    * [ ] [`indexOf(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
-    * [ ] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)
-    * [ ] [`remove(int)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28int%29)
-    * [ ] [`remove(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28java.lang.Object%29)
-    * [ ] [`set(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#set%28int,E%29)
-    * [ ] [`size()`](http://javadoc.taylorial.com/java.base/util/List.html#size%28%29)
-    * [ ] [`toArray()`](http://javadoc.taylorial.com/java.base/util/List.html#toArray%28%29)
-* [ ] Describe key differences between a singly linked list and the [`LinkedList<E>`](http://javadoc.taylorial.com/java.base/util/LinkedList.html) class
+    * [x] [`get(int)`](http://javadoc.taylorial.com/java.base/util/List.html#get%28int%29)
+    * [x] [`indexOf(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#indexOf%28java.lang.Object%29)
+    * [x] [`isEmpty()`](http://javadoc.taylorial.com/java.base/util/List.html#isEmpty%28%29)
+    * [x] [`remove(int)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28int%29)
+    * [x] [`remove(Object)`](http://javadoc.taylorial.com/java.base/util/List.html#remove%28java.lang.Object%29)
+    * [x] [`set(int, E)`](http://javadoc.taylorial.com/java.base/util/List.html#set%28int,E%29)
+    * [x] [`size()`](http://javadoc.taylorial.com/java.base/util/List.html#size%28%29)
+    * [x] [`toArray()`](http://javadoc.taylorial.com/java.base/util/List.html#toArray%28%29)
+* [x] Describe key differences between a singly linked list and the [`LinkedList<E>`](http://javadoc.taylorial.com/java.base/util/LinkedList.html) class
 * [ ] Determine the asymptotic time complexity of the following methods from a singly linked list class developed in lecture: `add(E)`, `add(int, E)`, `clear()`, `contains(Object)`, `get(int)`, `indexOf(Object)`, `isEmpty()`, `remove(int)`, `remove(Object)`, `set(int, E)`, and `size()`
 * [ ] Describe differences in the JCF `LinkedList` implementation compared to the one created in lecture that affect the asymptotic time complexity of any of the methods
 * [ ] Implement small software systems that use one or more `LinkedList<E>` objects

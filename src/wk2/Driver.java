@@ -2,6 +2,8 @@ package wk2;
 
 import wk1.ArrayList;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public class Driver {
@@ -10,12 +12,22 @@ public class Driver {
         for(int i=0; i<50; i++) {
             nums.add(i);
         }
-        System.out.println(sum(nums));
+        System.out.println(sumIterating(nums));
+    }
+
+    public static int sumIterating(Collection<Integer> nums) {
+        int total = 0;
+        Iterator<Integer> aName = nums.iterator();
+        while(aName.hasNext()) {
+            total += aName.next();
+        }
+        return total;
     }
 
     public static int sum(List<Integer> nums) {
         int total = 0;
-        for(int i=0; i<nums.size(); i++) {
+        int size = nums.size();
+        for(int i=0; i<size; i++) {
             total += nums.get(i);
         }
         return total;

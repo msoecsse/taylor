@@ -1,6 +1,14 @@
 ## Week 3
 
 ### Announcements
+* Grading of lab 3 benchmarking report
+  - 1 Included title/context in report
+  - 2 Included name in report
+  - 6 Clear outline describing asymptotic time analysis scenarios
+  - 10 Correct analysis of asymptotic time analysis scenarios
+  - 10 Benchmarking results
+  - 3 Graphs: title, axes labelled, and curves labelled
+  - 8 Interpreting results
 
 ### Iterators
 * [ ] List the methods declared in the [`Iterator<E>`](http://javadoc.taylorial.com/java.base/util/Iterator.html) interface

@@ -87,7 +87,21 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public Iterator<E> iterator() {
-        throw new UnsupportedOperationException("Too lazy");
+        return new ArrayListIterator();
+    }
+
+    private class ArrayListIterator implements Iterator<E> {
+        private int nextElement = 0;
+
+        @Override
+        public boolean hasNext() {
+            return nextElement<size();
+        }
+
+        @Override
+        public E next() {
+            return data[nextElement++];
+        }
     }
 
     @Override

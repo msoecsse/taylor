@@ -8,18 +8,27 @@ import java.util.List;
 
 public class Driver {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>();
+        List<Integer> nums = new LinkedList<>();
         for(int i=0; i<50; i++) {
             nums.add(i);
         }
-        System.out.println(sumIterating(nums));
+        System.out.println(sumIteratingEnhancedForLoop(nums));
     }
 
     public static int sumIterating(Collection<Integer> nums) {
         int total = 0;
         Iterator<Integer> aName = nums.iterator();
         while(aName.hasNext()) {
-            total += aName.next();
+            Integer num = aName.next();
+            total += num;
+        }
+        return total;
+    }
+
+    public static int sumIteratingEnhancedForLoop(Collection<Integer> nums) {
+        int total = 0;
+        for(Integer num : nums) {
+            total += num;
         }
         return total;
     }

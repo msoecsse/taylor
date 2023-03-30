@@ -1,6 +1,8 @@
 ## Week 4
 
 ### Announcements
+* No class next week
+* Must look at Lab 5 before returning from break
 
 ### Stacks
 

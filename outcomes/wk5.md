@@ -10,8 +10,8 @@
 * [x] Describe the design flaw found in the `Queue<E>` interface found in the Java Collections Framework
 * [x] Implement a class that provides an efficient implementation of the pure queue interface using a `LinkedList<E>`
 * [x] Explain why an `ArrayList<E>` is not an appropriate choice when implementing a pure queue interface
-* [ ] Explain how a circular queue differs from a standard queue
-* [ ] Implement a class that provides an efficient implementation of a circular queue using an array
+* [x] Explain how a circular queue differs from a standard queue
+* [x] Implement a class that provides an efficient implementation of a circular queue using an array
 * [x] Implement small software systems that use one or more queue data structures
 * [x] List at least two examples of when it makes sense to use a `Queue`
 

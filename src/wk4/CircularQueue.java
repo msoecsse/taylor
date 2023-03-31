@@ -22,8 +22,9 @@ public class CircularQueue<E> implements PureQueue<E> {
 
     @Override
     public boolean offer(E element) {
+        element.hashCode();
         boolean added = false;
-        if(!isFull && element != null) {
+        if(!isFull) {
             buffer[backIndex] = element;
             backIndex = (backIndex+1)%buffer.length;
             added = true;

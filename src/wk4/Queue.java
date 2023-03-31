@@ -11,6 +11,9 @@ public class Queue<E> implements PureQueue<E> {
 
     @Override
     public boolean offer(E element) {
+        if(element==null) {
+            throw new NullPointerException();
+        }
         return workhorse.offer(element);
     }
 

@@ -38,7 +38,7 @@
 * System testing
   - Tests the whole program in the context it is being used
 * Acceptance testing
-  - System testing designed to demonstrate that the program meets its functional requirements
+  - Acceptance testing designed to demonstrate that the program meets its functional requirements
     
 ## Types of Testing
 * Black-box testing

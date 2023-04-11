@@ -57,13 +57,18 @@ public class LinkedList<E> implements List<E> {
 
     @Override
     public int size() {
-        int count = 0;
-        Node<E> walker = head;
-        while(walker!=null) {
-            ++count;
-            walker = walker.next;
-        }
-        return count;
+        return size(head);
+//        int count = 0;
+//        Node<E> walker = head;
+//        while(walker!=null) {
+//            ++count;
+//            walker = walker.next;
+//        }
+//        return count;
+    }
+
+    private int size(Node<E> subhead) {
+        return (subhead==null) ? 0 : 1 + size(subhead.next);
     }
 
     @Override

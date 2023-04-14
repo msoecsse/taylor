@@ -14,16 +14,25 @@ public class Driver {
         System.out.println(binarySearch(data, 121));
     }
 
-    public static boolean binarySearchRec(int[] data, int target) {
+    public static boolean binarySearch(int[] data, int target) {
         return binarySearch(data, target, 0, data.length);
     }
 
     public static boolean binarySearch(int[] data, int target, int front, int back) {
-        return false;
+        int middleIndex = (back+front)/2;
+        boolean found = back==front ? false : data[middleIndex]==target;
+        if(!found && back>front) {
+            if(data[middleIndex]>target) {
+                found = binarySearch(data, target, front, middleIndex);
+            } else {
+                found = binarySearch(data, target, middleIndex+1, back);
+            }
+        }
+        return found;
     }
 
     // front = 5, back = 10
-    public static boolean binarySearch(int[] data, int target) {
+    public static boolean binarySearchIterative(int[] data, int target) {
         boolean found = false;
         int front = 0;
         int back = data.length;

@@ -23,6 +23,14 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
 
     private Node<E> root;
 
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node<E> subroot) {
+        return subroot==null ? 0 : 1 + Math.max(height(subroot.right), height(subroot.left));
+    }
+
     @Override
     public int size() {
         return size(root);
@@ -56,21 +64,6 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
             }
         }
         return found;
-    }
-
-    @Override
-    public Iterator<E> iterator() {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
-        return null;
     }
 
     @Override
@@ -108,8 +101,18 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
     }
 
     @Override
+    public void clear() {
+
+    }
+
+    @Override
     public boolean remove(Object o) {
         return false;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
     }
 
     @Override
@@ -133,7 +136,13 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
     }
 
     @Override
-    public void clear() {
-
+    public Object[] toArray() {
+        return new Object[0];
     }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        return null;
+    }
+
 }

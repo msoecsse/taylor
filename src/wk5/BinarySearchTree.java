@@ -9,19 +9,54 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
         E value;
         Node<E> left;
         Node<E> right;
+        Node<E> parent;
 
         Node(E value) {
-            this(value, null, null);
+            this(value, null, null, null);
         }
 
-        public Node(E value, Node<E> left, Node<E> right) {
+        public Node(E value, Node<E> parent, Node<E> left, Node<E> right) {
             this.value = value;
+            this.parent = parent;
             this.left = left;
             this.right = right;
         }
     }
 
     private Node<E> root;
+
+    /*
+                    Z
+                  /   \                    Y
+                Y      d   RR on Z      /     \
+              /   \         ====>      X       Z
+             X     c                  / \     / \
+            / \                      a   b   c   d
+           a   b
+     */
+    public Node<E> rightRotate(Node<E> Z) {
+        if(Z==null || Z.left==null) {
+            throw new IllegalArgumentException("Cannot rotate right on that argument.");
+        }
+        Node<E> Y = Z.left;
+        Node<E> c = Y.right;
+        Node<E> parent = Z.parent;
+        Z.left = c;
+        if(c!=null) {
+            c.parent = Z;
+        }
+        Y.right = Z;
+        Z.parent = Y;
+        Y.parent = parent;
+        if(parent!=null) {
+            if(parent.right==Z) {
+                parent.right = Y;
+            } else {
+                parent.left = Y;
+            }
+        }
+        return Y;
+    }
 
     public int height() {
         return height(root);
@@ -145,4 +180,14 @@ public class BinarySearchTree<E extends Comparable> implements Set<E> {
         return null;
     }
 
+    public Node<E> rotateRightDeMastri(Node<E> Z) {
+        if(Z==null || Z.left==null) {
+            throw new IllegalArgumentException("Can't rotate null node or node with null left child");
+        }
+        Node<E> Y = Z.left;
+        Node<E> X = Y.left;
+        Node<E> c = Y.right;
+        Node<E> parent = Z.parent;
+        return null;
+    }
 }

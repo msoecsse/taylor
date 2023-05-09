@@ -15,7 +15,7 @@ public class HashTable<E> implements Set<E> {
     }
 
     public HashTable(int tableSize) {
-        table = new LinkedList<>[tableSize];
+        table = new LinkedList[tableSize];
         size = 0;
     }
 
@@ -57,7 +57,7 @@ public class HashTable<E> implements Set<E> {
 
     @Override
     public void clear() {
-        table = new LinkedList<>[table.length];
+        table = new LinkedList[table.length];
         size = 0;
     }
 
